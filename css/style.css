@@ -34,7 +34,7 @@ body {
     .sous_nav a {
         list-style: none;
         text-decoration: none;
-        color: rgb(242, 242, 242);
+        color: rgb(16,34,46);
         transition: all 0.18s ease-in-out;
     }
 

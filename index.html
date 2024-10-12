@@ -139,59 +139,73 @@
 
     <div class="main_contact" id="contact">
         <div class="background--custom">
-            <canvas id="canvas"> 
+            <canvas id="canvas"></canvas>
         </div>
         <div class="txt_form" id="form_contact">
             <div class="bottom_form"></div>
             <div class="title_form">
                 <h3>Formulaire de contact</h3>
             </div>
-            <form name="myForm" onsubmit="return validateForm()" method="POST" data-netlify="true">
-               <table class="form-style">
-                  <tr>
-                     <td>
-                        <label>
-                           Votre nom <span class="required">*</span>
-                        </label>
-                     </td>
-                     <td>
-                        <input type="text" name="name" class="long"/>
-                        <span class="error" id="errorname"></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <label>
-                           Votre adresse e-mail <span class="required">*</span>
-                        </label>
-                     </td>
-                     <td>
-                        <input type="email" name="email" class="long"/>
-                        <span class="error" id="erroremail"></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <label>
-                           Message <span class="required">*</span>
-                        </label>
-                     </td>
-                     <td>
-                        <textarea name="message" class="long field-textarea"></textarea>
-                        <span class="error" id="errormsg"></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>
-                        <input type="submit" value="Envoyer">      
-                        <input type="reset" value="Réinitialiser"> 
-                     </td>
-                  </tr>
-               </table>
+            <form id="contactForm">
+                <table class="form-style">
+                    <tr>
+                        <td>
+                            <label>
+                                Votre nom <span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="name" class="long"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Votre adresse e-mail <span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email" class="long"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Message <span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <textarea id="message" name="message" class="long field-textarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Envoyer">
+                            <input type="reset" value="Réinitialiser">
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </div>
+    
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche le formulaire d'être soumis normalement
+    
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+    
+      // Créez le lien mailto avec les données du formulaire
+      var mailtoLink = 'mailto:jlaloy@proton.me?subject=Nouveau message de ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AAdresse e-mail : ' + encodeURIComponent(email);
+    
+      // Ouvrez le lien mailto
+      window.location.href = mailtoLink;
+    });
+    </script>
+    
     
     <footer>
         <a href="#navbar"> Retourner en haut </a>

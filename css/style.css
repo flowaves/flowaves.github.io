@@ -42,7 +42,7 @@ body {
     }
 
     .sous_nav a:hover {
-        color: rgb(184, 184, 184);
+        color: rgb(234, 83, 61);
         transition: all 0.18s ease-in-out;
     }
 
@@ -120,7 +120,7 @@ body {
     }
 
     .txt_containers h2{
-        color: rgb(4, 134, 173);
+        color: rgb(234, 83, 61);
         padding-bottom: 0.2em;
         font-size: 2.3em;
     }
@@ -820,13 +820,13 @@ body {
     color:red;
   }
   .form-style input[type=submit], .form-style input[type=reset]{
-    background: #4eb5f1;
+    background: #ea533d;
     padding: 8px 15px 8px 15px;
     border: none;
     color: #fff;
   }
   .form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
-    background: #2588ca;
+    background: white;
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;

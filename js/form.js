@@ -8,9 +8,9 @@ function generateMailtoLink(event) {
     var message = document.getElementById('message').value;
 
     var subject = "Demande de montage vidéo";
-    var body = "Bonjour,\n\nJe m'appelle " + name + " et je suis intéressé par un montage vidéo de type " + montageType + ". Mon budget est de " + budget + " euros.\n\nVoici mon message :\n" + message;
+    var body = "Bonjour,\n\nJe m'appelle " + name + " et je suis intéressé par un montage vidéo de type " + montageType + ". Mon budget est de " + budget + " euros.\n\n----------\n" + message;
 
-    var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    var mailtoLink = "mailto:jlaloy@proton.me?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
     window.location.href = mailtoLink;
 }

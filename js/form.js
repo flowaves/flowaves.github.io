@@ -2,7 +2,6 @@ function generateMailtoLink(event) {
     event.preventDefault();
 
     var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
     var montageType = document.getElementById('montageType').value;
     var budget = document.getElementById('budget').value;
     var message = document.getElementById('message').value;

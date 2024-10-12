@@ -146,7 +146,7 @@
             <div class="title_form">
                 <h3>Formulaire de contact</h3>
             </div>
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="generateMailtoLink(event)">
                 <table class="form-style">
                     <tr>
                         <td>
@@ -155,7 +155,7 @@
                             </label>
                         </td>
                         <td>
-                            <input type="text" id="name" name="name" class="long"/>
+                            <input type="text" id="name" name="name" class="long" required/>
                         </td>
                     </tr>
                     <tr>
@@ -165,7 +165,33 @@
                             </label>
                         </td>
                         <td>
-                            <input type="email" id="email" name="email" class="long"/>
+                            <input type="email" id="email" name="email" class="long" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Type de montage <span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <select id="montageType" name="montageType" class="long" required>
+                                <option value="reseaux">Réseaux</option>
+                                <option value="evenement">Événement</option>
+                                <option value="documentaire">Documentaire</option>
+                                <option value="vlog">Vlog</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Budget <span class="required">*</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="number" id="budget" name="budget" class="long" required/>
                         </td>
                     </tr>
                     <tr>
@@ -175,7 +201,7 @@
                             </label>
                         </td>
                         <td>
-                            <textarea id="message" name="message" class="long field-textarea"></textarea>
+                            <textarea id="message" name="message" class="long field-textarea" required></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -189,24 +215,7 @@
             </form>
         </div>
     </div>
-    
-    <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Empêche le formulaire d'être soumis normalement
-    
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var message = document.getElementById('message').value;
-    
-      // Créez le lien mailto avec les données du formulaire
-      var mailtoLink = 'mailto:jlaloy@proton.me?subject=Nouveau message de ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AAdresse e-mail : ' + encodeURIComponent(email);
-    
-      // Ouvrez le lien mailto
-      window.location.href = mailtoLink;
-    });
-    </script>
-    
-    
+
     <footer>
         <a href="#navbar"> Retourner en haut </a>
     </footer>
@@ -217,6 +226,7 @@
 </script>
 <script src="./js/animation_effets.js"></script>
 <script src="./js/easter_egg.js"></script>
+<script src="./js/form.js"></script>
 </body>
 </html>
 <!-- Tapez "JOSUEISAGOAT" pour découvrir un secret ! -->

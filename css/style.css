@@ -557,9 +557,9 @@ body {
       }
 
   :root {
-      --premiere: #ba2976;
-      --photoshop: #1ea2c0;
-      --aftereffect: rgb(117, 1, 159);
+      --premiere: #df3333;
+      --photoshop: #dcdc39;
+      --aftereffect: rgb(62, 46, 1);
     }
     
     html {

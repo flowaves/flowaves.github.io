@@ -521,6 +521,7 @@ body {
         width: 21em;
     }
 }
+
 /*---------------*/
 
 
@@ -752,6 +753,144 @@ body {
       font-size: 1.35em;
     }
 }
+
+/*---------------*/
+
+
+/* Clients Style */
+.main_clients {
+    margin-top: 12%;
+    text-align: center;
+}
+
+.main_clients h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.client_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.client_card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2em;
+    width: 30em;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.client_photo {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.star_rating {
+    color: #ffd700;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.client_review {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.client_order {
+    font-size: 1em;
+    color: rgb(234, 83, 61);
+}
+
+@media (max-width: 1200px) {
+    .main_clients h2 {
+        font-size: 2.5em;
+    }
+
+    .client_card {
+        width: 25em;
+    }
+
+    .client_photo {
+        width: 8em;
+        height: 8em;
+    }
+
+    .star_rating {
+        font-size: 1.2em;
+    }
+
+    .client_review {
+        font-size: 1em;
+    }
+
+    .client_order {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 950px) {
+    .main_clients h2 {
+        font-size: 2em;
+    }
+
+    .client_card {
+        width: 20em;
+    }
+
+    .client_photo {
+        width: 7em;
+        height: 7em;
+    }
+
+    .star_rating {
+        font-size: 1em;
+    }
+
+    .client_review {
+        font-size: 0.9em;
+    }
+
+    .client_order {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 599px) {
+    .main_clients h2 {
+        font-size: 1.8em;
+    }
+
+    .client_card {
+        width: 18em;
+    }
+
+    .client_photo {
+        width: 6em;
+        height: 6em;
+    }
+
+    .star_rating {
+        font-size: 0.9em;
+    }
+
+    .client_review {
+        font-size: 0.8em;
+    }
+
+    .client_order {
+        font-size: 0.7em;
+    }
+}
+
+
 /*---------------*/
 
 
